@@ -30,10 +30,10 @@
   import Aside from "./Aside";
   import Footer from "./Footer";
   import Header from "./Header";
-  import BackTop from "@/components/BackTop"
+  // import BackTop from "@/components/BackTop"
   export default {
     name: "Main",
-    components: {Aside,Footer,Header,BackTop},
+    components: {Aside,Footer,Header},
     data() {
       return {
         isCollapse: false, //导航栏默认为展开
