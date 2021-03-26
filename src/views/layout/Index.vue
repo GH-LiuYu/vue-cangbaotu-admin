@@ -13,11 +13,12 @@
           <Header></Header>
         </div>
       </el-header>
-      <el-main ref="homePage">
+      <el-main ref="homePage" class="backtop">
         <transition name="fade" mode="out-in">
 <!--          想要动画生效，下面必须加key-->
             <router-view  :key="key"></router-view>
         </transition>
+        <el-backtop target=".backtop" :visibility-height=200></el-backtop>
       </el-main>
 <!--        <el-footer>-->
 <!--            <Footer></Footer>-->
