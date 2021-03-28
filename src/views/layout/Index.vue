@@ -122,7 +122,7 @@
   }
   .fade-leave-active,
   .fade-enter-active {
-    transition: all .5s;
+    transition: all 1s;
   }
 
   .fade-enter {

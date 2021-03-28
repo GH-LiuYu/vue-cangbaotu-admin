@@ -20,6 +20,17 @@ const routes = [
       }
     ]
   },
+  {
+    path: '/introduce',
+    component: Layout,
+    redirect: '/introduce/introduce',//重定向到index
+    children: [
+      {
+        path: 'Introduce',
+        component: () => import('@/views/introduce/Introduce'),//这种方式不需要在上面import引入
+      }
+    ]
+  },
   { path: '/helloWorld',
     component: HelloWorld
   }//这种方式需要在上面import引入
