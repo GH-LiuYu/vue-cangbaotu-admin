@@ -13,7 +13,7 @@
             text-color="#fff"
             active-text-color="rgb(64, 158, 255)"
     >
-      <el-menu-item index="1" class="cbt-menu-item">
+      <el-menu-item index="/introduce" class="cbt-menu-item">
         <i class="el-icon-s-home"></i>
         <span>我的主页</span>
       </el-menu-item>

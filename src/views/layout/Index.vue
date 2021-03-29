@@ -1,7 +1,7 @@
 <template>
   <div>
   <el-container>
-    <el-aside width="collapse">
+    <el-aside width="auto">
       <Aside :isCollapse="isCollapse"></Aside>
     </el-aside>
     <el-container>
@@ -13,11 +13,12 @@
           <Header></Header>
         </div>
       </el-header>
-      <el-main>
+      <el-main ref="homePage" class="backtop">
         <transition name="fade" mode="out-in">
 <!--          想要动画生效，下面必须加key-->
             <router-view  :key="key"></router-view>
         </transition>
+        <el-backtop target=".backtop" :visibility-height=200></el-backtop>
       </el-main>
 <!--        <el-footer>-->
 <!--            <Footer></Footer>-->
@@ -39,6 +40,15 @@
         isCollapse: false, //导航栏默认为展开
         toggle: false, //第二个图标默认隐藏
         block: true, //默认显示第一个图标
+
+        clientHeight:'',
+      };
+    },
+    mounted(){
+      // 获取浏览器可视区域高度
+      this.clientHeight =   `${document.documentElement.clientHeight}`
+      window.onresize = function temp() {
+        this.clientHeight = `${document.documentElement.clientHeight}`;
       };
     },
     computed: {
@@ -46,12 +56,21 @@
         return this.$route.fullPath;
       },
     },
+    watch: {
+      // 如果 `clientHeight` 发生改变，这个函数就会运行
+      clientHeight: function () {
+        this.changeFixed(this.clientHeight)
+      }
+    },
     methods: {
       // 动态控制展开与收起和切换对应图标
       sw() {
         this.isCollapse = !this.isCollapse;
         this.toggle = !this.toggle;
         this.block = !this.block;
+      },
+      changeFixed(clientHeight){ //动态修改样式
+        this.$refs.homePage.$el.style.height = clientHeight-100+'px';
       },
     },
   };
@@ -64,8 +83,7 @@
     height: 100%;
     padding: 0 !important;
     box-shadow: 0 1px 4px rgba(0,21,41,.08);
-    position: relative;
-      text-align: center;
+    text-align: center;
   }
 
   .el-aside {
@@ -79,13 +97,6 @@
   }
 
   .el-main{
-      position: absolute;
-      left: 200px;
-      right: 0;
-      top: 60px;
-      bottom: 0;
-      overflow-y: scroll;
-      /*text-align: center;*/
   }
   .el-footer {
       background-color: #b3c0d1;
@@ -111,7 +122,7 @@
   }
   .fade-leave-active,
   .fade-enter-active {
-    transition: all .5s;
+    transition: all 1s;
   }
 
   .fade-enter {
