@@ -5,13 +5,13 @@
       <Aside :isCollapse="isCollapse"></Aside>
     </el-aside>
     <el-container>
-      <el-header>
-        <div class="box_bgd" @click="sw">
+      <el-header class="box_bgd" >
+        <div @click="sw">
           <!-- 点击展开收起导航和切换对应图标 -->
           <i class="el-icon-s-fold" v-show="block"></i>
           <i class="el-icon-s-unfold" v-show="toggle"></i>
-          <Header></Header>
         </div>
+        <Header></Header>
       </el-header>
       <el-main ref="homePage" class="backtop">
         <transition name="fade" mode="out-in">
@@ -112,7 +112,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    width: 54px;
   }
   .box_bgd i {
     font-size: 20px;

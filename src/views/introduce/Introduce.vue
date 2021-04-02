@@ -26,17 +26,17 @@
   </section>
   <section class="myskill">
     <span class="iconfont icon-shiwu-chuizi"></span>
-    <h2>掌握技能</h2>
+    <h2>技能清单</h2>
     <hr>
     <div class="detail">
       <ul>
-        <li>英语六级 <strong>CET-6</strong> : 535分；</li>
-        <li>大学时期自学获得 <strong>中级口译证书</strong>；</li>
-        <li>掌握HTML5/CSS3，熟悉传统布局、Flex布局、Grid布局、移动端适配等</li>
-        <li>熟悉Vue技术栈如Vue-Router、Vuex、Vue-CLI及相关流行库的使用，理解其重要概念</li>
-        <li>熟悉React / Redux技术栈等使用，能够使用React进行基本开发</li>
-        <li>熟悉前后端交互技术JSONP、AJAX，了解fetch</li>
-        <li>熟悉Node.js开发，能搭建基础后台开发</li>
+        <li>Web开发：PHP/Hack/Node</li>
+        <li>Web框架：ThinkPHP/Yaf/Yii/Laravel/LazyPHP</li>
+        <li>前端框架：Bootstrap/Vue</li>
+        <li>数据库相关：MySQL/PgSQL/PDO/SQLite</li>
+        <li>版本管理、文档和自动化部署工具：Svn/Git/PHPDoc/Phing/Composer</li>
+        <li>单元测试：PHPUnit/SimpleTest/Qunit</li>
+        <li>云和开放平台：SAE/BAE/AWS/微博开放平台/微信应用开发</li>
       </ul>
     </div>
   </section>

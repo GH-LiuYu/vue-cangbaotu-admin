@@ -3,6 +3,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 import HelloWorld from "../components/HelloWorld";
 import Layout from "../views/layout/Index"
+import Upload from "../components/Upload"
 const routes = [
   {
     path: '/',
@@ -33,6 +34,9 @@ const routes = [
   },
   { path: '/helloWorld',
     component: HelloWorld
+  },//这种方式需要在上面import引入
+  { path: '/upload',
+    component: Upload
   }//这种方式需要在上面import引入
 ]
 
