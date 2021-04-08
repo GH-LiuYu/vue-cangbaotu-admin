@@ -11,7 +11,7 @@
 </template>
 <script>
   export default {
-    props: {action:string},
+    props: ['url'],
     components: {},
     data() {
       return {

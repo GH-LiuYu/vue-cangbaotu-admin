@@ -40,7 +40,6 @@
         isCollapse: false, //导航栏默认为展开
         toggle: false, //第二个图标默认隐藏
         block: true, //默认显示第一个图标
-
         clientHeight:'',
       };
     },
@@ -50,6 +49,7 @@
       window.onresize = function temp() {
         this.clientHeight = `${document.documentElement.clientHeight}`;
       };
+
     },
     computed: {
       key() {

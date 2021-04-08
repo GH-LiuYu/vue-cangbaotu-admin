@@ -2,7 +2,7 @@
   <div>
     <div :style="{width:isCollapse==true?'54px':''}" class="titlebar">
        <img src="../../assets/logo/logo.svg" :style="{width:isCollapse==true?'54px':'60px',height:isCollapse==true?'54px':'60px'}">
-       <span style="align-self: center;margin-left: 5px" v-show="!isCollapse">藏宝图</span>
+       <span style="align-self: center;margin-left: 5px" v-show="!isCollapse">------</span>
     </div>
     <el-menu
             :default-active="$route.path"
@@ -25,6 +25,9 @@
         </template>
         <!-- 二级导航标题 -->
         <el-menu-item-group>
+          <el-menu-item index="/test">
+            测试
+          </el-menu-item>
           <el-menu-item index="/dashboard">
             PHP语言
           </el-menu-item>
