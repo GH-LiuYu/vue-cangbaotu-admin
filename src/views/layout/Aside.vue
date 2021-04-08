@@ -17,6 +17,14 @@
         <i class="el-icon-s-home"></i>
         <span>我的主页</span>
       </el-menu-item>
+      <el-menu-item index="/excellent" class="cbt-menu-item">
+        <i class="el-icon-menu"></i>
+        <span>优质资源</span>
+      </el-menu-item>
+      <el-menu-item index="/documents" class="cbt-menu-item">
+        <i class="el-icon-reading"></i>
+        <span>文档资源</span>
+      </el-menu-item>
       <el-submenu index="2">
         <!-- 插槽 插入一级导航标题 -->
         <template slot="title">
