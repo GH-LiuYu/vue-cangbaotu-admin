@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <div class="h-content">
-      头部
+  <div class="h-content">
+    <div>
     </div>
+    <div class="h-login">登录</div>
   </div>
 </template>
 
@@ -24,6 +24,13 @@ export default {
 </script>
 <style scoped>
 .h-content{
-  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  width: 100%;
 }
+  .h-login{
+    padding-right: 30px;
+  }
 </style>
