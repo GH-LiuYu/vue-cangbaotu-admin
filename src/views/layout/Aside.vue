@@ -26,6 +26,14 @@
         <i class="el-icon-reading"></i>
         <span>文档资源</span>
       </el-menu-item>
+      <el-menu-item index="/errorPage" class="cbt-menu-item">
+        <i class="el-icon-reading"></i>
+        <span>404错误</span>
+      </el-menu-item>
+      <el-menu-item index="/nav" class="cbt-menu-item">
+        <i class="el-icon-s-promotion"></i>
+        <span>导航管理</span>
+      </el-menu-item>
       <el-submenu index="2">
         <!-- 插槽 插入一级导航标题 -->
         <template slot="title">
@@ -45,6 +53,10 @@
           </el-menu-item>
         </el-menu-item-group>
       </el-submenu>
+      <el-menu-item index="/test" class="cbt-menu-item">
+        <i class="el-icon-discover"></i>
+        <span>测试案例</span>
+      </el-menu-item>
     </el-menu>
   </div>
 </template>

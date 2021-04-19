@@ -15,10 +15,10 @@ export default {
     };
   },
   created() {
-   this.login();
+   this.logins();
   },
   methods: {
-    login:function () {
+    logins:function () {
       login({test:'555'}).then(response => {
         this.data  = response.data;
         console.log(this.data)

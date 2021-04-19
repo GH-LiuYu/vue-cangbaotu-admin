@@ -6,13 +6,14 @@
     </el-aside>
     <el-container>
       <el-header class="box_bgd" >
-        <div @click="sw">
+        <div @click="sw" class="sw">
           <!-- 点击展开收起导航和切换对应图标 -->
           <i class="el-icon-s-fold" v-show="block"></i>
           <i class="el-icon-s-unfold" v-show="toggle"></i>
         </div>
         <Header></Header>
       </el-header>
+        <Scrollpane></Scrollpane>
       <el-main ref="homePage" class="backtop">
         <transition name="fade" mode="out-in">
 <!--          想要动画生效，下面必须加key-->
@@ -32,9 +33,10 @@
   import Footer from "./Footer";
   import Header from "./Header";
   // import BackTop from "@/components/BackTop"
+  import Scrollpane from "./scrollPane/index"
   export default {
     name: "Main",
-    components: {Aside,Footer,Header},
+    components: {Aside,Footer,Header,Scrollpane},
     data() {
       return {
         isCollapse: false, //导航栏默认为展开
@@ -77,12 +79,18 @@
 </script>
 
 <style lang="scss" scoped>
-  .el-header {
-    color: #333;
+    .scroll{
+        background-color: rebeccapurple;
+    }
+    .sw{
+        background-color:  #293258;
+    }
+    .el-header {
+    color: white;
     line-height: 60px;
     height: 100%;
     padding: 0 !important;
-    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+      box-shadow: 0px 2px 2px 0px #4a4747;
     text-align: center;
   }
 
@@ -97,6 +105,7 @@
   }
 
   .el-main{
+     background-color: #f9f6f6;
   }
   .el-footer {
       background-color: #b3c0d1;
@@ -121,7 +130,7 @@
   }
   .fade-leave-active,
   .fade-enter-active {
-    transition: all 1s;
+    transition: all 0.4s;
   }
 
   .fade-enter {

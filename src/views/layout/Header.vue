@@ -29,8 +29,10 @@ export default {
   justify-content: space-between;
   justify-items: center;
   width: 100%;
+  background-color:#293258;
 }
   .h-login{
     padding-right: 30px;
+    color: white;
   }
 </style>
