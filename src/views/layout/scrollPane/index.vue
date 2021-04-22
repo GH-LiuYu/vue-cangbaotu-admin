@@ -200,7 +200,7 @@ export default {
 
 <style lang="scss" scoped>
 .tags-view-container {
-  height: 34px;
+  height: 32px;
   width: 100%;
   background: #e2eaf1;
   border-bottom: 1px solid #d8dce5;
@@ -218,9 +218,9 @@ export default {
       padding: 0 8px;
       font-size: 12px;
       margin-left: 5px;
-      margin-top: 4px;
+      margin-top: 2px;
       &:first-of-type {
-        margin-left: 15px;
+        margin-left: 20px;
       }
       &:last-of-type {
         margin-right: 15px;

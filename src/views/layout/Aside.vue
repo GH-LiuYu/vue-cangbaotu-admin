@@ -18,7 +18,7 @@
         <i class="el-icon-s-home"></i>
         <span>我的主页</span>
       </el-menu-item>
-      <el-menu-item index="/excellent" class="cbt-menu-item">
+      <el-menu-item index="/fineWeb" class="cbt-menu-item">
         <i class="el-icon-menu"></i>
         <span>优质资源</span>
       </el-menu-item>
@@ -42,13 +42,13 @@
         </template>
         <!-- 二级导航标题 -->
         <el-menu-item-group>
-          <el-menu-item index="/dashboard">
+          <el-menu-item index="/php">
             PHP语言
           </el-menu-item>
-          <el-menu-item index="/B-Extension/B-Extension">
+          <el-menu-item index="/go">
             GO语言
           </el-menu-item>
-          <el-menu-item index="/C-Management/C-Management">
+          <el-menu-item index="/python">
             Python语言
           </el-menu-item>
         </el-menu-item-group>
@@ -69,7 +69,15 @@ export default {
   data() {
     return {
       logo:'../../assets/logo/logo.svg',
+      list:[
+        {name:'主页',url:'/introduce'},
+        {name:'优质资源',url:'/good-web'},
+        {name:'文档资源',url:'/documents'},
+        {name:'404错误',url:'/errorPage'},
+        {name:'导航管理',url:'/nav'},
+        {name:'编程语言',url:'/nav'},
 
+      ],
     };
   },
   created() {

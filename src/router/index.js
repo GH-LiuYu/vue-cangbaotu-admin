@@ -18,6 +18,8 @@ const routes = [
     children: [
       {
         path: 'index',
+        name: '主页',
+        meta: { title: '主页' },
         component: () => import('@/views/dashboard/Index'),//这种方式不需要在上面import引入
       }
     ]
@@ -26,14 +28,12 @@ const routes = [
     path: '/introduce',
     component: Layout,
     redirect: '/introduce/introduce',//重定向到index
-    name:'intro',
-    meta: { title: '简介' },
     children: [
       {
         path: 'Introduce',
-        name:'intro1',
+        name:'主页',
         component: () => import('@/views/introduce/Introduce'),//这种方式不需要在上面import引入
-        meta: { title: '简介1' }
+        meta: { title: '主页' }
       }
     ]
   },
@@ -49,15 +49,17 @@ const routes = [
   {
     path: '/documents',
     component: Layout,
-    redirect: '/documents/Index',//重定向到index
-    meta: { title: '文档' },
-    name:'docname',
+    redirect: '/documents/index',//重定向到index
     children: [
       {
-        path: 'Index',
-        name:'docnameindex',
+        path: 'index',
+        name:'文档资源',
         component: () => import('@/views/documents/Index'),//这种方式不需要在上面import引入
-        meta: { title: '文档2' }
+        meta: { title: '文档资源' }
+      },
+      {
+        path: 'add',
+        component: () => import('@/views/documents/Add'),//这种方式不需要在上面import引入
       }
     ]
   },
@@ -65,14 +67,29 @@ const routes = [
     path: '/errorPage',
     component: Layout,
     redirect: '/errorPage/404',//重定向到index
-    meta: { title: '404' },
-    name:'404',
     children: [
       {
         path: '404',
         meta: { title: '404' },
         name:'404',
         component: () => import('@/views/errorPage/404'),//这种方式不需要在上面import引入
+      }
+    ]
+  },
+  {
+    path: '/nav',
+    component: Layout,
+    redirect: '/nav/index',//重定向到index
+    children: [
+      {
+        path: 'index',
+        meta: { title: '导航管理' },
+        name:'导航管理',
+        component: () => import('@/views/nav/Index'),//这种方式不需要在上面import引入
+      },
+      {
+        path: 'add',
+        component: () => import('@/views/nav/Add'),//这种方式不需要在上面import引入
       }
     ]
   }

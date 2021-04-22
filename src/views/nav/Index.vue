@@ -17,7 +17,7 @@
     components: {Table,Page,Navbar},
     data(){
       return{
-        addroute:'/documents/add'
+        addroute:'/nav/add'
       };
     }
   }
